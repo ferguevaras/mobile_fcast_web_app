@@ -30,7 +30,7 @@ def mostrar_contenido():
     st.markdown("""
         <h2 style="text-align: center;">Understanding Data Utilization in Mexico City 🚀</h2>
         <p style="text-align: center;">
-            This application provides insights into data usage patterns in Mexico City (CDMX) 📊 . 
+            This application developed by EFTS Group provides insights into data usage patterns in Mexico City (CDMX) 📊 . 
             Explore average download speeds, upload speeds, and latency across various boroughs, 
             and gain valuable insights into how data is being utilized in this vibrant urban area. 
             Our app contains a 3-month forecast for each metric, allowing you to understand 
@@ -120,20 +120,20 @@ def mostrar_contenido():
 
     # Agregar la serie de tiempo histórica
     historical_data = filtered_df[filtered_df['type'] == 'historical']
-    fig.add_trace(go.Scatter(x=historical_data['ds'], y=historical_data['y'], mode='lines', name='Histórico', line=dict(color='lightblue')))
+    fig.add_trace(go.Scatter(x=historical_data['ds'], y=historical_data['y'], mode='lines', name='Historic', line=dict(color='lightblue')))
 
     # Agregar el pronóstico (yhat) y sus límites
     forecast_data = filtered_df[filtered_df['type'] == 'forecast']
 
     # Agregar el pronóstico (yhat)
-    fig.add_trace(go.Scatter(x=forecast_data['ds'], y=forecast_data['y'], mode='lines', name='Pronóstico', line=dict(color='orange')))
+    fig.add_trace(go.Scatter(x=forecast_data['ds'], y=forecast_data['y'], mode='lines', name='Forecast', line=dict(color='orange')))
 
     # Agregar límites inferiores y superiores del pronóstico
     fig.add_trace(go.Scatter(
         x=forecast_data['ds'],
         y=forecast_data['yhat_upper'],
         mode='lines',
-        name='Límite Superior',
+        name='y_hat upper',
         line=dict(color='lightgreen'),
         fill='tonexty',  # Rellena hacia abajo
         fillcolor='rgba(144, 238, 144, 0.2)'  # Color de relleno
@@ -143,15 +143,15 @@ def mostrar_contenido():
         x=forecast_data['ds'],
         y=forecast_data['yhat_lower'],
         mode='lines',
-        name='Límite Inferior',
+        name='y_hat lower',
         line=dict(color='lightcoral'),
         fill='tonexty',  # Rellena hacia arriba
         fillcolor='rgba(255, 182, 193, 0.2)'  # Color de relleno
     ))
 
     # Actualizar el layout de la gráfica
-    fig.update_layout(title=f"{variable} a lo largo del tiempo",
-                    xaxis_title='Fecha',
+    fig.update_layout(title=f"{variable} through time",
+                    xaxis_title='Date',
                     yaxis_title=variable.capitalize(),
                     legend=dict(x=0, y=1))
 
