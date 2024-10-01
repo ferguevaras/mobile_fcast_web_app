@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import json
-st.set_page_config(page_title="efts-group/CheckoutNet", layout="wide")
+st.set_page_config(page_title="efts-group/CheckoutNet!", layout="wide")
 
 
 # Configuración de la contraseña
