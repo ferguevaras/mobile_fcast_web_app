@@ -6,8 +6,7 @@ import json
 st.set_page_config(page_title="efts-group/CheckoutNet", layout="wide")
 
 
-# Configuración de la contraseña
-PASSWORD = "efts_24*"
+
 
 # Función principal
 def main():
