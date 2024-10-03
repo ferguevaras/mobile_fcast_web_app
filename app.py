@@ -33,10 +33,37 @@ def mostrar_contenido():
             This application developed by EFTS Group, provides insights into LTE data usage patterns in Mexico City (CDMX) 📊 . 
             Explore average download speeds, upload speeds, and latency across various boroughs, 
             and gain valuable insights into how data is being utilized in this vibrant urban area. 
-            Our app contains a 3-month forecast for each metric, allowing you to understand 
-            future trends in data usage 📶.
-        </p>
-    """, unsafe_allow_html=True)
+            Our app contains a Machine Learning Model 3-month forecast for each metric, allowing you to understand 
+            future trends in data usage 📶.    </p>
+                
+    <h3 style="text-align: center;">Methodology</h3>
+
+    <p>
+        This study utilizes crowdsourced data from the Ookla platform, which provides real-time information on mobile connection quality. The dataset includes measurements of <strong>upload</strong>, <strong>download</strong>, and <strong>latency</strong> speeds, segmented by each of the boroughs in Mexico City (CDMX) and by operator (Telcel, AT&amp;T, Altan, and Movistar).
+    </p>
+
+    <h3>Data Collection and Preparation</h3>
+
+    <p>
+        The Ookla data is collected and processed to obtain representative metrics of service quality in each borough. Preprocessing steps include data cleaning and the imputation of missing values, ensuring that measurements are consistent and comparable.
+    </p>
+
+    <h3>Statistical Analysis</h3>
+
+    <p>
+        Various descriptive statistical techniques are employed to map the boroughs of CDMX, allowing for the calculation of average <strong>upload</strong>, <strong>download</strong>, and <strong>latency</strong> speeds for each operator. This analysis includes generating thematic maps that visualize the distribution of these metrics across different boroughs, facilitating the identification of areas with optimal performance and those that require infrastructure improvements.
+    </p>
+
+    <h3>Machine Learning Models</h3>
+
+    <p>
+        To perform three-month forecasts, a machine learning model based on time series decomposition is developed. This model uses the historical data of each borough and operator, analyzing trends, seasonality, and cycles present in the data. Evaluation metrics such as mean squared error (MSE) and mean absolute error (MAE) are utilized to validate the model's accuracy.
+    </p>
+
+    <p>
+        The combination of statistical techniques and machine learning models enables not only an understanding of the current state of mobile connection quality in CDMX but also an anticipation of its evolution, providing valuable information for decision-making in connectivity policies and service improvements.
+    </p>
+        """, unsafe_allow_html=True)
 
 
     # Cargar el archivo CSV con los datos de las series de tiempo
