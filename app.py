@@ -29,12 +29,12 @@ def mostrar_contenido():
         # Centered title and introduction
     st.markdown("""
         <h2 style="text-align: center;">Understanding LTE Data Utilization in Mexico City 🚀</h2>
-        <p style="text-align: center;">
+        <p style="text-align: justify;">
             This application developed by EFTS Group, provides insights into LTE data usage patterns in Mexico City (CDMX) 📊 . 
             Explore average download speeds, upload speeds, and latency across various boroughs, 
             and gain valuable insights into how data is being utilized in this vibrant urban area. 
             Our app contains a Machine Learning Model 3-month forecast for each metric, allowing you to understand 
-            future trends in data usage 📶.    </p>
+            future trends in data usage 📶.</p>
                 
     <h3 style="text-align: center;">Methodology</h3>
 
