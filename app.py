@@ -186,7 +186,7 @@ def mostrar_contenido():
     # Add the rights reserved image at the end
 
     # Agrega el aviso de derechos reservados
-    st.markdown('<p style="text-align: center;width:10;">© 2024 Ookla® Data - All Rights Reserved.</p>', unsafe_allow_html=True)
+    st.markdown('<p style="text-align: center;width:10;">© Analysis conducted by EFTS Group based on proprietary and Ookla® data corresponding to 2022-2024 period. All Rights Reserved.</p>', unsafe_allow_html=True)
     
 if __name__ == "__main__":
     main()
